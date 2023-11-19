@@ -6,7 +6,7 @@ const simpleGit = require('simple-git');
 
 try {
   
-  await simpleGit.pull('origin', 'master', { '--no-rebase': null });
+  simpleGit.pull('origin', 'master', { '--no-rebase': null });
 //  await git.checkout('test');
 
 } catch (error) {
