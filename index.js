@@ -12,7 +12,7 @@ async function run(){
 
   //  await git.checkout('test');
 
-  await git.checkout("test-branch");
+  await git.checkout('test');
   const branch = await git.branch();
 
   // logs "test-branch"
