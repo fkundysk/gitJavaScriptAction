@@ -7,16 +7,16 @@ const git = simpleGit.default();
 
 async function run(){
 
-    //git.pull('origin', 'main', { '--no-rebase': null });
+    await git.pull('origin', 'main', { '--no-rebase': null });
     //git.checkout('test');
 
-  //  await git.checkout('test');
+    //  await git.checkout('test');
 
-  await git.checkout('test');
-  const branch = await git.branch();
+    const branch = await git.checkout('test');
+    //const branch = await git.branch();
 
-  // logs "test-branch"
-  console.log(branch)
+    // logs "test-branch"
+    console.log(branch)
 
 
 
