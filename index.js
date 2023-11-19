@@ -7,17 +7,9 @@ simpleGit().clean(simpleGit.CleanOptions.FORCE);
 
 import { simpleGit, SimpleGit, SimpleGitOptions } from 'simple-git';
 
-const options: Partial<SimpleGitOptions> = {
-   baseDir: process.cwd(),
-   binary: 'git',
-   maxConcurrentProcesses: 6,
-   trimmed: false,
-  };
-
-const git: SimpleGit = simpleGit(options);
 try {
   
-  await git.pull('origin', 'master', { '--no-rebase': null });
+  await simpleGit.pull('origin', 'master', { '--no-rebase': null });
 //  await git.checkout('test');
 
 } catch (error) {
