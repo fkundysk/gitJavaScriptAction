@@ -10,15 +10,15 @@ async function run(){
     let pullMain = await git.pull('main');
     console.log(pullMain);
 
-    let branchAll = await git.branch.branchAll;
+    let branchAll = await git.branch();
     console.log(branchAll);
 
     const checkoutBranch = await git.checkout('tempTest');
     //const checkoutBranch = await git.branch.checkoutBranch('testTemp');
     console.log(checkoutBranch);
 
-    const currentBranch = await git.branch.currentBranch;
-    console.log(currentBranch);
+    const currentBranch = await git.branch();
+    console.log(currentBranch.current);
 
 
 /*
