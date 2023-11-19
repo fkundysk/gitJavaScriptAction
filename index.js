@@ -15,7 +15,7 @@ async function run(){
 
     console.log(statusMain);
 
-    const logMain = await git.log('--oneline', '-n10');
+    const logMain = await git.log('--oneline');
 
     console.log(logMain);
 
