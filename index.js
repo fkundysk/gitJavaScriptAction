@@ -13,7 +13,8 @@ async function run(){
     let branchAll = await git.branch.branchAll;
     console.log(branchAll);
 
-    const checkoutBranch = await git.branch.checkoutBranch('testTemp');
+    const checkoutBranch = await git.checkout('origin','tempTest');
+    //const checkoutBranch = await git.branch.checkoutBranch('testTemp');
     console.log(checkoutBranch);
 
     const currentBranch = await git.branch.currentBranch;
