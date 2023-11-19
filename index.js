@@ -7,7 +7,9 @@ const git = simpleGit.default();
 
 async function run(){
 
-    await git.pull('origin', 'main', { '--no-rebase': null });
+    let pullMain = await git.pull('main');
+
+    console.log(pullMain)
     //git.checkout('test');
 
     //  await git.checkout('test');
