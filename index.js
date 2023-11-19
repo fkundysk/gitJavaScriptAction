@@ -2,17 +2,24 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 let exec = require('child_process').exec;
 const simpleGit = require('simple-git');
-simpleGit().clean(simpleGit.CleanOptions.FORCE);
-const git = simpleGit();
+const git = simpleGit.default();
 
 
-try {
-  
-  git.pull('origin', 'main', { '--no-rebase': null });
-  //git.checkout('test');
+async function run(){
 
-//  await git.checkout('test');
+    //git.pull('origin', 'main', { '--no-rebase': null });
+    //git.checkout('test');
 
-} catch (error) {
-  console.log(error.message);
+  //  await git.checkout('test');
+
+  await git.checkout("test-branch");
+  const branch = await git.branch();
+
+  // logs "test-branch"
+  console.log(branch.current)
+
+
+
 }
+
+run();
