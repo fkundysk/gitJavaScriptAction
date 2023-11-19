@@ -11,6 +11,10 @@ async function run(){
 
     console.log(pullMain);
 
+    let statusMain = await git.status();
+
+    console.log(statusMain);
+
 
     //const branch = await git.branch('--all');
     //console.log(branch);
