@@ -1,0 +1,6 @@
+name: 'Git Action Test'
+description: 'Test Some Git Commands'
+
+runs:
+  using: 'node20'
+  main: 'index.js'
