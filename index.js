@@ -8,7 +8,9 @@ const git = simpleGit();
 
 try {
   
-  console.log(git.pull('origin', 'master', { '--no-rebase': null }));
+  git.pull('origin', 'main', { '--no-rebase': null });
+  //git.checkout('test');
+
 //  await git.checkout('test');
 
 } catch (error) {
