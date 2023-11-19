@@ -15,6 +15,10 @@ async function run(){
 
     console.log(statusMain);
 
+    const logMain = await git.log('--oneline', '-n10');
+
+    console.log(logMain);
+
 
     //const branch = await git.branch('--all');
     //console.log(branch);
