@@ -16,7 +16,7 @@ async function run(){
   const branch = await git.branch();
 
   // logs "test-branch"
-  console.log(branch.current)
+  console.log(branch)
 
 
 
