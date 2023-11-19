@@ -9,16 +9,20 @@ async function run(){
 
     let pullMain = await git.pull('main');
 
-    console.log(pullMain)
+    console.log(pullMain);
+
+
+    //const branch = await git.branch('--all');
+    //console.log(branch);
     //git.checkout('test');
 
     //  await git.checkout('test');
 
-    const branch = await git.checkout('test');
+  //  const branch = await git.checkout('test');
     //const branch = await git.branch();
 
     // logs "test-branch"
-    console.log(branch)
+    //console.log(branch)
 
 
 
